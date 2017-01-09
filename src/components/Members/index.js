@@ -11,9 +11,9 @@ export default class About extends Component {
   render() {
     const { className, ...props } = this.props;
     return (
-      <div className={classnames('Member', className)} {...props}>
+      <div className={classnames('Members', className)} {...props}>
         <h1>
-          Member
+          Members
         </h1>
       </div>
     );
