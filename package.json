@@ -1,9 +1,16 @@
 {
-  "name": "routed-react",
+  "name": "quad-cmp-ui",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.8.5"
+    "chai": "^3.5.0",
+    "enzyme": "^2.7.0",
+    "mocha": "^3.2.0",
+    "mz": "^2.6.0",
+    "react-addons-test-utils": "^15.4.2",
+    "react-scripts": "0.8.5",
+    "supertest": "^2.0.1",
+    "supertest-as-promised": "^4.0.2"
   },
   "dependencies": {
     "classnames": "^2.2.5",
