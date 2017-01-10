@@ -2,3 +2,5 @@ node_modules/
 .nvmrc
 .DS_Store
 build/
+quad-cmp-ui.sublime-project
+quad-cmp-ui.sublime-workspace
