@@ -1,4 +1,4 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 import logo from './quad-logo.png';
@@ -12,7 +12,6 @@ import MenuItem from 'material-ui/MenuItem';
 import DashboadIcon from 'material-ui/svg-icons/action/dashboard';
 import MenuIcon from 'material-ui/svg-icons/navigation/menu';
 import PowerIcon from 'material-ui/svg-icons/action/power-settings-new';
-import TimelineIcon from 'material-ui/svg-icons/action/timeline';
 import ViewListIcon from 'material-ui/svg-icons/action/view-list';
 
 import './style.css';
