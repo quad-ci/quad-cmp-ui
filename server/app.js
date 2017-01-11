@@ -1,10 +1,10 @@
-const express = require('express');
-const morgan  = require('morgan');
-const path    = require('path');
+const express    = require('express');
+const middleware = require('./middlewares/example.middleware');
+const morgan     = require('morgan');
+const path       = require('path');
 
 const app = express();
 const env = process.env.NODE_ENV || 'development';
-const middleware = require('./middlewares/example.middleware');
 
 // Don't log during tests
 // Logging middleware
