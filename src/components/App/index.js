@@ -31,7 +31,7 @@ class App extends Component {
       quadLogo: {
         height: '36px',
         marginTop: '8px',
-        marginLeft: '40px'
+        marginLeft: '5px'
       }
     };
   }
