@@ -2,6 +2,7 @@ const express    = require('express');
 const middleware = require('./middlewares/example.middleware');
 const morgan     = require('morgan');
 const path       = require('path');
+const user       = require('./controllers/user')
 
 const app = express();
 const env = process.env.NODE_ENV || 'development';
@@ -15,6 +16,9 @@ if (env !== 'test') {
 
 // Serve static assets
 app.use(express.static(path.resolve(__dirname, '..', 'build')));
+
+// API Routes
+app.get('/api/user', middleware.test, user.find);
 
 // Always return the main index.html, so react-router renders the route in the client
 app.get('*', middleware.test, (req, res) => {
