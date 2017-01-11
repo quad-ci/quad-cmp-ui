@@ -18,10 +18,10 @@ if (env !== 'test') {
 app.use(express.static(path.resolve(__dirname, '..', 'build')));
 
 // API Routes
-app.get('/api/user', middleware.test, user.find);
+app.get('/v1/api/user', middleware.test, user.find);
 
 // Always return the main index.html, so react-router renders the route in the client
-app.get('*', middleware.test, (req, res) => {
+app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
 });
 

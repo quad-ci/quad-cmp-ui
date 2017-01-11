@@ -26,7 +26,7 @@ export default class Users extends Component {
   }
 
   loadUsers() {
-    axios.get('/api/users').then((res) => {
+    axios.get('/v1/api/user').then((res) => {
       console.log('res', res)
       this.setState({ users: res.users });
     },
