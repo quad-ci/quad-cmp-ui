@@ -39,7 +39,7 @@ export default class Users extends Component {
     return (
       <div className={classnames('Users', className)} {...props}>
         <h1>Users</h1>
-        <Snackbar open={this.state.open} message={this.state.message} autoHideDuration={4000} onRequestClose={this.handleRequestClose} />
+        <Snackbar open={this.state.open} message={this.state.message} autoHideDuration={4000} onRequestClose={this.handleRequestClose.bind(this)} />
       </div>
     )
   }
