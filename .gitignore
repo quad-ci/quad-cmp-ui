@@ -6,3 +6,4 @@ quad-cmp-ui.sublime-project
 quad-cmp-ui.sublime-workspacenpm-debug.log
 npm-debug.log
 quad-cmp-ui.sublime-workspace
+.env
