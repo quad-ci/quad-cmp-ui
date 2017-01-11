@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { browserHistory } from 'react-router';
+import { Router, browserHistory } from 'react-router';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import Routes from './routes';
+import routes from './routes';
 
 import './index.css';
 
@@ -14,7 +14,7 @@ injectTapEventPlugin();
 
 ReactDOM.render(
   <MuiThemeProvider>
-    <Routes history={browserHistory} />
+    <Router history={browserHistory} routes={routes} onUpdate={() => window.scrollTo(0, 0)} />
   </MuiThemeProvider>,
   document.getElementById('root')
 );

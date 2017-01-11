@@ -1,16 +1,16 @@
 import React from 'react';
-import { Router, Route } from 'react-router';
+import { Route, IndexRoute } from 'react-router';
 
 import App from './components/App';
 import Users from './components/Users';
 import NotFound from './components/NotFound';
 
-const Routes = (props) => (
-  <Router {...props}>
-    <Route path="/" component={App} />
+const routes = (
+  <Route path="/" component={App}>
+    <IndexRoute component={Users}/>
     <Route path="/users" component={Users} />
     <Route path="*" component={NotFound} />
-  </Router>
+  </Route>
 );
 
-export default Routes;
+export default routes;

@@ -21,13 +21,13 @@ connect()
   .on('disconnected', connect)
   .once('open', listen);
 
+function connect() {
+  var options = { server: { socketOptions: { keepAlive: 1 } } };
+  return mongoose.connect(config.db, options).connection;
+}
+
 function listen() {
   if (app.get('env') === 'test') return;
   app.listen(port);
   console.log(`App listening on port ${port}`);
-}
-
-function connect() {
-  var options = { server: { socketOptions: { keepAlive: 1 } } };
-  return mongoose.connect(config.db, options).connection;
 }

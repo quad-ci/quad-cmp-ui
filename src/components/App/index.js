@@ -40,7 +40,7 @@ class App extends Component {
     return (
       <IconMenu iconButtonElement={<IconButton><MenuIcon /></IconButton>} targetOrigin={{horizontal: 'right', vertical: 'top'}} anchorOrigin={{horizontal: 'right', vertical: 'top'}}>
         <MenuItem primaryText="Dashboard" leftIcon={<DashboadIcon />} containerElement={<Link to="/" style={this.style.button}></Link>}></MenuItem>
-        <MenuItem primaryText="Members" leftIcon={<ViewListIcon />} containerElement={<Link to="/members" style={this.style.button}></Link>}></MenuItem>
+        <MenuItem primaryText="Users" leftIcon={<ViewListIcon />} containerElement={<Link to="/users" style={this.style.button}></Link>}></MenuItem>
         <MenuItem primaryText="Sign out" leftIcon={<PowerIcon />} containerElement={<Link to="/sign-out" style={this.style.button}></Link>}></MenuItem>
       </IconMenu>
     );
@@ -50,10 +50,8 @@ class App extends Component {
     const { className, ...props } = this.props;
     return (
       <div className={classnames('App', className)} {...props}>
-        <AppBar style={this.style.appBar} title="hello world" iconElementLeft={<img src={logo} alt="logo" style={this.style.quadLogo}></img>} iconElementRight={this.menu()}/>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <AppBar style={this.style.appBar} title="" iconElementLeft={<img src={logo} alt="logo" style={this.style.quadLogo}></img>} iconElementRight={this.menu()}/>
+        <div className="app-content">{this.props.children}</div>
       </div>
     );
   }
