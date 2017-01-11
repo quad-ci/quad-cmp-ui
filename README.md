@@ -27,6 +27,12 @@ npm start # run client
 PORT=4000 node server # run proxy server for /api routes
 ```
 
+## Running tests
+
+```sh
+npm test
+```
+
 ## Building for production
 
 ```sh
