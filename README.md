@@ -21,9 +21,10 @@ Install dependencies
 ## Running locally
 
 Make sure you are running correct node version specified in package.json
+
 ```sh
 npm start # run client
-PORT=4000 node server # proxy server for /api routes
+PORT=4000 node server # run proxy server for /api routes
 ```
 
 ## Building for production
