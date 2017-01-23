@@ -1,20 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router, browserHistory } from 'react-router';
-import injectTapEventPlugin from 'react-tap-event-plugin';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
-import routes from './routes';
+import App from './components/App/App';
 
-import './index.css';
+const render = (Component) => {
+  ReactDOM.render(
+    <div>
+      <Component/>
+    </div>,
+    document.getElementById('root')
+  );
+};
 
-// Needed for onTouchTap
-// http://stackoverflow.com/a/34015469/988941
-injectTapEventPlugin();
-
-ReactDOM.render(
-  <MuiThemeProvider>
-    <Router history={browserHistory} routes={routes} onUpdate={() => window.scrollTo(0, 0)} />
-  </MuiThemeProvider>,
-  document.getElementById('root')
-);
+render(App);
