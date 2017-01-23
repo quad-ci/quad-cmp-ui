@@ -1,7 +1,7 @@
 node_modules/
 .nvmrc
 .DS_Store
-build/
+dist/
 quad-cmp-ui.sublime-project
 quad-cmp-ui.sublime-workspacenpm-debug.log
 npm-debug.log
