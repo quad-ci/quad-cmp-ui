@@ -1,7 +1,6 @@
-import axios from 'axios';
 import React, { Component } from 'react';
-import classnames from 'classnames';
 import Snackbar from 'material-ui/Snackbar';
+import UsersGrid from '../UsersGrid';
 
 import './style.css';
 
@@ -12,34 +11,23 @@ export default class Users extends Component {
 
     this.state = {
       message: '',
-      open: false,
-      users: []
+      open: false
     };
   }
 
   componentDidMount() {
-    this.loadUsers();
+
   }
 
   handleRequestClose() {
     this.setState({ open: false });
   }
 
-  loadUsers() {
-    axios.get('/fake-api/users.json').then((res) => {
-      console.log('res', res)
-      this.setState({ users: res.users });
-    },
-    (err) => {
-      this.setState({ message: String(err), open: true });
-    });
-  }
-
   render() {
-    const { className, ...props } = this.props;
     return (
-      <div className={classnames('Users', className)} {...props}>
+      <div className="">
         <h1>Users test</h1>
+        <UsersGrid />
         <Snackbar open={this.state.open} message={this.state.message} autoHideDuration={4000} onRequestClose={this.handleRequestClose.bind(this)} />
       </div>
     )
