@@ -5,6 +5,8 @@ import App from './components/App/App';
 import Users from './components/Users';
 import NotFound from './components/NotFound';
 
+require('file-loader?name=[name].[ext]!./static/index.html');
+
 const Routes = (props) => (
   <Router {...props}>
     <Route path="/" component={App} />
