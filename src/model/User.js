@@ -9,7 +9,7 @@ export default class User {
   }
 
   static async getCurrent() {
-    const response = await axios.get(`${config.serviceUrl}user`, { withCredentials:true });
+    const response = await axios.get(`${config.serviceUrl}user`, { withCredentials: true });
     return response.data;
   }
 }
